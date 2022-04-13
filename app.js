@@ -11,7 +11,7 @@ const dbURI = `mongodb+srv://root:${process.env.PASSWORD}@recording-life.a31dg.m
 // const dbURI = "mongodb://127.0.0.1:27017/nodeapi";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => {
-        app.listen(3000);
+        app.listen(80);
         console.log("database connected");
     })
     .catch(err => console.log(err))
