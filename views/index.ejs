@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %> 
+<body>
+    <%- include("./partials/nav.ejs") %> 
+
+    <div class="blogs content">
+        <h2>所有博客</h2>
+        <!-- 动态展示博客信息 -->
+        <% if(blogs.length > 0) { %> 
+            <% blogs.forEach(blog => { %> 
+                <a class="single" href="/blogs/<%= blog._id %> ">
+                    <h3 class="title">
+                        <%= blog.title %> 
+                    </h3>
+                    <p class="snippet">
+                        <%= blog.snippet %> 
+                    </p>
+                </a>
+            <% }) %> 
+        <% } else {%> 
+            <p>没有任何的博客内容</p>
+        <% } %> 
+    </div>
+    <%- include("./partials/footer.ejs") %> 
+</body>
+
+</html>
