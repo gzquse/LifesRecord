@@ -5,8 +5,8 @@
     <%- include("./partials/nav.ejs") %> 
 
     <div class="blogs content">
-        <h2>所有博客</h2>
-        <!-- 动态展示博客信息 -->
+        <h2>发卡记录</h2>
+        <!-- 动态展示卡片信息 -->
         <% if(blogs.length > 0) { %> 
             <% blogs.forEach(blog => { %> 
                 <a class="single" href="/blogs/<%= blog._id %> ">
@@ -19,7 +19,7 @@
                 </a>
             <% }) %> 
         <% } else {%> 
-            <p>没有任何的博客内容</p>
+            <p>无发卡记录</p>
         <% } %> 
     </div>
     <%- include("./partials/footer.ejs") %> 
