@@ -5,13 +5,13 @@ require('dotenv').config();
 const blogRoutes = require('./routes/blogRoutes');
 
 const app = express();
-
+const PORT = process.env.PORT || 3000;
 // connect database
 const dbURI = `mongodb+srv://root:${process.env.PASSWORD}@recording-life.a31dg.mongodb.net/record?retryWrites=true&w=majority`
 // const dbURI = "mongodb://127.0.0.1:27017/nodeapi";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => {
-        app.listen(80);
+        app.listen(PORT);
         console.log("database connected");
     })
     .catch(err => console.log(err))

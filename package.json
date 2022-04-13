@@ -1,5 +1,5 @@
 {
-  "name": "basic",
+  "name": "recording-life",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "martin",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
@@ -17,5 +17,8 @@
     "lodash": "^4.17.21",
     "mongoose": "^5.13.5",
     "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "16.14.2"
   }
 }
