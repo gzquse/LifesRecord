@@ -28,6 +28,12 @@ const deleteBlog = (req,res) => {
     Blog.findByIdAndDelete(id).then(result => res.json({redirect: "/blogs"})).catch(err => console.log(err))
 }
 
+//TODO update blog
+const updateBlog = (req, res) => {
+    const id = req.params.id;
+    Blog.findByIdAndUpdate(id).then()
+}
+
 module.exports = {
     blog,
     create,
